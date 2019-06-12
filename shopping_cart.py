@@ -1,34 +1,6 @@
-# Shopping Cart Project 
-
-Shao Zhou
-NYU Stern School of Business
-Programming in Python 
-Summer 2019 / Professor Rossetti
-
-## Prerequisites
-
-  + Anaconda 3.7
-  + Python 3.7
-  + Pip
-
-## Repo Setup
-
-Use the GitHub.com online interface to create a new remote project repository called "shopping-cart". When prompted by the GitHub.com online interface, add a "README.md" file and a Python-flavored ".gitignore" file (and also optionally a "LICENSE") during the repo creation process. After this process is complete, you should be able to view the repo on GitHub.com at an address like https://github.com/YOUR_USERNAME/shopping-cart.
-
-After creating the remote repo, use GitHub Desktop software or the command-line to download or "clone" it onto your computer. Choose a familiar download location like the Desktop.
-
-After cloning the repo, navigate there from the command-line:
-
-```sh
-cd ~/Desktop/shopping-cart
-```
-
-Use your text editor or the command-line to create a file in that repo called "shopping_cart.py", and then place the following contents inside:
-
-```sh
 # shopping_cart.py
 
-#from pprint import pprint
+from pprint import pprint
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -53,36 +25,7 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-print(products)
-# pprint(products)
+#print(products)
+pprint(products)
 
 # TODO: write some Python code here to produce the desired output
-```
-
-Make sure to save Python files like this whenever you're done editing them. After setting up a virtual environment, we will be ready to run this file.
-
-
-## Environment Setup
-
-Create and activate a new Anaconda virtual environment:
-
-```sh
-conda create -n shopping-env python=3.7 # (first time only)
-conda activate shopping-env
-```
-
-From within the virtual environment, install the pytest package:
-
-```py
-# NOTE: we won't need pytest until/unless addressing the optional "Automated Testing" challenge,
-# so you can feel free to skip this now and return later...
-
-pip install pytest
-```
-
-From within the virtual environment, demonstrate your ability to run the Python script from the command-line:
-
-```sh
-python shopping_cart.py
-```
-
