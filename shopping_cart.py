@@ -33,9 +33,14 @@ products = [
 #
 
 selected_id = input("Please input a product identifier: ")
-print(selected_id)
-print(type(selected_id))  #input is a string datatype
+# print(selected_id)
+# print(type(selected_id))  #input is a string datatype
 
+# given selected identifier, find its matching product
+matching_products = [p for p in products if str(p["id"]) == str(selected_id)]  #id is an integer while selected_id is a string, convert both to string to compare
+matching_product = matching_products[0]  #select the first matching product
+print("SELECTED PRODUCT: " + str(matching_product["name"]) + " " + str(matching_product["price"]))
+print(type(matching_product))
 
 #
 # INFO DISPLAY / OUTPUT
