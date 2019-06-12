@@ -1,9 +1,6 @@
 # Shopping Cart Project 
 
-Shao Zhou
-NYU Stern School of Business
-Programming in Python 
-Summer 2019 / Professor Rossetti
+A Python application that facilitates a business' checkout process.
 
 ## Prerequisites
 
