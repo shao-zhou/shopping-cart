@@ -54,11 +54,6 @@ while  True:
         #print(type(matching_product))
 
 # print(selected_ids)
-
-
-    
-        
-
 #
 # INFO DISPLAY / OUTPUT
 #
@@ -76,13 +71,14 @@ print("CHECKOUT AT: " + str(now))
 print("---------------------------------")
 
 # The name and price of each shopping cart item, price being formatted as US dollars and cents (e.g. $1.50)
-print("SELECTED PRODUCT(S): ") 
+print("SELECTED PRODUCTS: ") 
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]  #id is an integer while selected_id is a string, convert both to string to compare
     matching_product = matching_products[0]  #select the first matching product
     price_usd = '${0:.2f}'.format(matching_product["price"]) #USD format
     total_price = total_price + matching_product["price"]
     print("... " + str(matching_product["name"]) + " " + str(price_usd))
+print("---------------------------------")
 
 # The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices
 total_price_usd = '${0:.2f}'.format(total_price) 
@@ -94,5 +90,11 @@ tax_usd = '${0:.2f}'.format(tax)
 print("TAX: " + str(tax_usd))
 
 # The total amount owed, formatted as US dollars and cents (e.g. $4.89), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items
-# A friendly message thanking the customer and/or encouraging the customer to shop again
+grand_total = total_price + tax
+grand_total_usd = '${0:.2f}'.format(grand_total) 
+print("TOTAL: " + str(grand_total_usd))
 
+# A friendly message thanking the customer and/or encouraging the customer to shop again
+print("---------------------------------")
+print("THANKS, SEE YOU AGAIN SOON!")
+print("---------------------------------")
