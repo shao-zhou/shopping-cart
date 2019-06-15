@@ -33,29 +33,40 @@ products = [
 #
 
 total_price = 0
+selected_ids = []  #empty list
 
 while  True:
-    selected_id = input("Please input a product identifier: ")
+    selected_id = input("Please input a product identifier, or 'DONE' if there are no more items: ")
     #> "DONE"
     if selected_id == "DONE":
         break
     else:
+        selected_ids.append(selected_id)
+
         # print(selected_id)
         # print(type(selected_id))  #input is a string datatype
         # given selected identifier, find its matching product
-        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]  #id is an integer while selected_id is a string, convert both to string to compare
-        matching_product = matching_products[0]  #select the first matching product
-        total_price = total_price + matching_product["price"]
-        print("SELECTED PRODUCT: " + str(matching_product["name"]) + " " + str(matching_product["price"]))
+        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]  #id is an integer while selected_id is a string, convert both to string to compare
+        # matching_product = matching_products[0]  #select the first matching product
+        # total_price = total_price + matching_product["price"]
+        # print("SELECTED PRODUCT: " + str(matching_product["name"]) + " " + str(matching_product["price"]))
         #print(type(matching_product))
+
+# print(selected_ids)
+
+for selected_id in selected_ids:
+    matching_products = [p for p in products if str(p["id"]) == str(selected_id)]  #id is an integer while selected_id is a string, convert both to string to compare
+    matching_product = matching_products[0]  #select the first matching product
+    total_price = total_price + matching_product["price"]
+    print("SELECTED PRODUCT: " + str(matching_product["name"]) + " " + str(matching_product["price"]))
+        
 
 #
 # INFO DISPLAY / OUTPUT
 #
 
 # The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices
-
-print("TOTAL PRICE: $" + str(total_price))
+print("TOTAL PRICE: " + str(total_price))
 
 # A grocery store name of your choice
 # A grocery store phone number and/or website URL and/or address of choice
