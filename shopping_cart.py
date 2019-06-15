@@ -57,8 +57,9 @@ while  True:
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]  #id is an integer while selected_id is a string, convert both to string to compare
     matching_product = matching_products[0]  #select the first matching product
+    price_usd = '${0:.2f}'.format(matching_product["price"]) #USD format
     total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + str(matching_product["name"]) + " " + str(matching_product["price"]))
+    print("SELECTED PRODUCT: " + str(matching_product["name"]) + " " + str(price_usd))
         
 
 #
@@ -66,7 +67,7 @@ for selected_id in selected_ids:
 #
 
 # The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices
-print("TOTAL PRICE: " + str(total_price))
+print("TOTAL PRICE: $" + str(total_price))
 
 # A grocery store name of your choice
 # A grocery store phone number and/or website URL and/or address of choice
