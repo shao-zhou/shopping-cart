@@ -2,6 +2,12 @@
 # from pprint import pprint
 
 import datetime
+import urllib.request as request
+import csv
+
+r = request.urlopen('https://github.com/shao-zhou/shopping-cart/blob/master/data/products.csv')
+reader = csv.reader(r)
+# used this code to read products.csv file in github folder: https://stackoverflow.com/questions/51351804/extract-csv-file-from-github-library-with-python
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
