@@ -2,6 +2,7 @@
 # from pprint import pprint
 
 import datetime
+import time
 import urllib.request as request
 import csv
 
@@ -72,7 +73,9 @@ print("50 E 4TH ST, NEW YORK, NY 10009")
 print("---------------------------------")
 
 # The date and time of the beginning of the checkout process, formatted in a human-friendly way (e.g. 2019-06-06 11:31 AM)
-now = datetime.datetime.now()
+now = time.strftime("%Y-%m-%d %H:%M:%p")
+# used code to format date and time suggested in this stackoverflow thread: https://stackoverflow.com/questions/31955761/converting-python-string-to-datetime-obj-with-am-pm
+
 print("CHECKOUT AT: " + str(now))
 print("---------------------------------")
 
