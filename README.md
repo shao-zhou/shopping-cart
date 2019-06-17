@@ -29,3 +29,4 @@ From within the virtual environment, run the Python script from the command-line
 python shopping_cart.py
 ```
 
+Follow the user input prompts to return a receipt to the customer.
